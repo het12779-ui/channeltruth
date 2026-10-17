@@ -23,6 +23,8 @@ disagreement between them is visible instead of hidden inside a vendor dashboard
 
 The first screen is built to start an argument, because that is the product.
 
+![Load animation: panels rise and credit bars grow once, then settle](docs/screenshots/motion.gif)
+
 **Channel credit** ranks channels under the selected model; **model comparison**
 puts all five models side by side over the same journeys, with the delta against
 last-touch (the number every ad platform reports by default) in the last column.
