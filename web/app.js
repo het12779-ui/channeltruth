@@ -223,6 +223,19 @@ const App = {
 
         <p class="num-sub" style="margin-top: 12px">{{ MODEL_HINTS[model] }}</p>
       </main>
+
+      <footer class="app-footer">
+        <span class="footer-brand">ChannelTruth</span>
+        <span class="footer-rule"></span>
+        <span>{{ compare ? compare.journeys : 0 }} journeys</span>
+        <span>{{ models.length }} models</span>
+        <span>{{ report ? report.channels.length : 0 }} channels</span>
+        <span class="footer-gap"></span>
+        <span class="footer-live" :class="{ 'is-down': error }">
+          <i></i>{{ error ? 'API unreachable' : 'API connected' }}
+        </span>
+        <span class="footer-mono">{{ fromDay }} → {{ toDay }}</span>
+      </footer>
     </div>
   `,
 };

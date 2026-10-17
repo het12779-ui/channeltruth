@@ -15,6 +15,35 @@ disagreement between them is visible instead of hidden inside a vendor dashboard
 ![Tests](https://img.shields.io/badge/tests-102%20passing-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
+![ChannelTruth dashboard: channel credit, five-model comparison and journey explorer](docs/screenshots/dashboard.webp)
+
+---
+
+## The dashboard
+
+The first screen is built to start an argument, because that is the product.
+
+**Channel credit** ranks channels under the selected model; **model comparison**
+puts all five models side by side over the same journeys, with the delta against
+last-touch (the number every ad platform reports by default) in the last column.
+Google reads **1.57× under last-touch and 0.55× under first-touch** — the same
+spend, two opposite recommendations. That disagreement is not a bug to be
+smoothed away; it is the honest output.
+
+![Journey explorer: every touch and its exact credit under the selected model](docs/screenshots/journey-detail.webp)
+
+**Journey explorer.** Pick a conversion and see every touch, its timestamp, the
+shifted credit split, and the per-model totals along the bottom. When a marketer
+asks "why did email get ₹10,673", this is the answer, not a black box.
+
+Design notes:
+
+- the heat intensity of each matrix cell is the channel's share under that model,
+  so the visual weight matches the number rather than fighting it;
+- motion is ambient and entrance-only; `prefers-reduced-motion` disables it;
+- Vue 3 via ES modules, one stylesheet, no build step, no CDN — `make run` and
+  the dashboard is live.
+
 ---
 
 ## Why this belongs in an Advertising Cloud
